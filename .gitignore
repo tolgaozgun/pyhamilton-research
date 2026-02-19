@@ -10,3 +10,11 @@ rag_data/
 .streamlit/secrets.toml
 *.tmp
 .DS_Store
+node_modules/
+dist-electron/
+release/
+*.dmg
+*.exe
+*.AppImage
+
+*.md

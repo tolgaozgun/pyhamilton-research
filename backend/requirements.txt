@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic>=2.0
+python-dotenv
+google-generativeai
+openai
+anthropic
+Pillow
+pyyaml
+# chromadb  # optional: install for vector-based RAG retrieval

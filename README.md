@@ -1,37 +1,94 @@
-# PyHamilton Script Generator with Gemini
+# PyHamilton Automation Agent
 
-A Streamlit-based user interface that leverages Google's Gemini models to generate PyHamilton automation scripts.
+AI-powered PyHamilton script generation with three workflow modes, validated pipelines, and autonomous error correction.
 
-## Features
-- **Interactive UI**: Select labware, input protocol descriptions, and upload deck layouts.
-- **Multimodal Inputs**: Supports both text descriptions and image inputs (e.g., diagrams, deck layouts) for context.
-- **Code Generation**: Automatically generates valid `pyhamilton` Python scripts.
-- **Download**: Easily download the generated script to run on your device.
+## Architecture
 
-## Prerequisites
-- Python 3.9+
-- A Google Cloud Project with the Gemini API enabled and an API key.
+- **Backend**: FastAPI (Python 3.12) — LLM orchestration, validation pipeline, RAG, simulation
+- **Frontend**: React + TypeScript + Vite + Tailwind CSS — modern dark-mode UI
+- **Desktop**: Electron — cross-platform Mac/Windows/Linux app
+- **Infra**: Docker Compose for containerized deployment, GitHub Actions for CI/CD
 
-## Installation
+## Modes
 
-1.  Clone this repository or navigate to the folder.
-2.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+| Mode | Target User | Description |
+|------|-------------|-------------|
+| **Simple** | Bench scientists | Prompt in, script out. No validation. |
+| **Developer** | Automation engineers | 8-step validated pipeline with review checkpoints |
+| **Agentic** | Power users | Autonomous pipeline with error diagnosis and retry |
 
-## Usage
+## Quick Start
 
-1.  Run the application:
-    ```bash
-    streamlit run app.py
-    ```
-2.  Open the URL provided in the terminal (usually `http://localhost:8501`).
-3.  Enter your **Google Gemini API Key** in the sidebar.
-4.  Configure your deck, describe your protocol, and (optional) upload an image.
-5.  Click **Generate Script** and download the result.
+### Development
+
+```bash
+# Backend
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+
+# Frontend (separate terminal)
+cd frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:5173
+
+### Docker
+
+```bash
+docker compose up --build
+```
+
+Backend at :8000, frontend at :3000.
+
+### Electron (Desktop App)
+
+```bash
+cd frontend
+npm run electron:dev     # Development
+npm run electron:build   # Package for current platform
+```
 
 ## Project Structure
-- `app.py`: Main application entry point.
-- `prompt_engineering.py`: Helper module for constructing prompts.
-- `requirements.txt`: Python dependencies.
+
+```
+├── backend/
+│   ├── app/
+│   │   ├── main.py              # FastAPI entry point
+│   │   ├── config.py            # Models, enums, constants
+│   │   ├── api/routes/          # REST + SSE endpoints
+│   │   ├── core/                # Pipeline, safety, RAG, simulator, comparison
+│   │   ├── providers/           # LLM abstraction (Google, OpenAI, Anthropic, OpenRouter)
+│   │   ├── prompts/             # System prompts and templates
+│   │   └── agents/              # Agent tools
+│   ├── Dockerfile
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   │   ├── pages/               # Simple, Developer, Agentic, Settings
+│   │   ├── components/          # CodeBlock, PipelineProgress, EventLog, etc.
+│   │   ├── api/                 # API client
+│   │   ├── store/               # Zustand state management
+│   │   └── types/               # TypeScript types
+│   ├── electron/                # Electron wrapper
+│   ├── Dockerfile
+│   └── electron-builder.yml
+├── docker-compose.yml
+├── .github/workflows/
+│   ├── ci.yml                   # Build verification
+│   └── release.yml              # Electron release (Mac/Win/Linux)
+└── docs/
+    ├── PRD.md
+    └── UPDATED_PRD.md
+```
+
+## Releases
+
+Push a tag `v*` to trigger the release workflow, which builds unsigned Electron apps for Mac (DMG), Windows (NSIS), and Linux (AppImage).
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
