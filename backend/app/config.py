@@ -144,6 +144,7 @@ class UserInput(BaseModel):
     context: Optional[str] = None
     image_b64: Optional[str] = None
     max_retries: int = Field(default=3, ge=1, le=10)
+    deck_config: Optional[dict] = None
 
 
 class LabwareMap(BaseModel):

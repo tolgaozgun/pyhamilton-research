@@ -1,10 +1,39 @@
 import { useState, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Zap, Loader2 } from 'lucide-react'
+import { Zap, Loader2, ChevronDown, ChevronUp } from 'lucide-react'
 import { useAppStore } from '@/store'
 import { api } from '@/api/client'
 import { extractCode } from '@/lib/utils'
 import { CodeBlock } from '@/components/CodeBlock'
+import { DeckLayout } from '@/components/deck/DeckLayout'
+import { AspirationSettings } from '@/components/deck/AspirationSettings'
+import type { CarrierPlacement, AspirationSettingsData, DeckConfig } from '@/types'
+import { DEFAULT_ASPIRATION } from '@/types'
+
+const DEFAULT_CARRIERS: CarrierPlacement[] = [
+  {
+    carrier_type: 'TIP_CAR_480_A00',
+    start_rail: 1,
+    slots: [
+      { type: 'tip_rack', subtype: '300uL', name: 'Tips 300µL #1' },
+      { type: 'tip_rack', subtype: '300uL', name: 'Tips 300µL #2' },
+      null,
+      null,
+      null,
+    ],
+  },
+  {
+    carrier_type: 'PLT_CAR_L5AC_A00',
+    start_rail: 7,
+    slots: [
+      { type: 'plate', subtype: '96_well', name: 'Source Plate' },
+      { type: 'plate', subtype: '96_well', name: 'Dest Plate' },
+      null,
+      null,
+      null,
+    ],
+  },
+]
 
 export default function SimplePage() {
   const { llmConfig } = useAppStore()
@@ -13,7 +42,11 @@ export default function SimplePage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [streamMode, setStreamMode] = useState(true)
-  const eventSourceRef = useRef<EventSource | null>(null)
+  const abortRef = useRef<AbortController | null>(null)
+
+  const [carriers, setCarriers] = useState<CarrierPlacement[]>(DEFAULT_CARRIERS)
+  const [aspiration, setAspiration] = useState<AspirationSettingsData>(DEFAULT_ASPIRATION)
+  const [showDeck, setShowDeck] = useState(false)
 
   const handleGenerate = useCallback(async () => {
     if (!goal.trim()) return
@@ -22,58 +55,47 @@ export default function SimplePage() {
     setError(null)
     setScript('')
 
-    if (eventSourceRef.current) {
-      eventSourceRef.current.close()
-      eventSourceRef.current = null
+    if (abortRef.current) abortRef.current.abort()
+    abortRef.current = new AbortController()
+
+    const deckConfig: DeckConfig = {
+      carriers,
+      aspiration_settings: aspiration,
+      total_rails: 55,
+    }
+
+    const userInput = {
+      goal: goal.trim(),
+      mode: 'simple' as const,
+      deck_config: deckConfig as unknown as Record<string, unknown>,
     }
 
     if (streamMode) {
-      const es = api.simple.stream({
-        goal: goal.trim(),
-        provider_name: llmConfig.provider,
-        model_name: llmConfig.model_name,
-        api_key: llmConfig.api_key,
-      })
-      eventSourceRef.current = es
-      let accumulated = ''
-
-      es.onmessage = (event) => {
-        try {
-          const data = JSON.parse(event.data)
-          if (data.type === 'chunk') {
-            accumulated += data.content
+      try {
+        let accumulated = ''
+        for await (const event of api.simple.stream(userInput, llmConfig)) {
+          if (event.type === 'chunk') {
+            accumulated += event.content
             setScript(accumulated)
-          } else if (data.type === 'done') {
-            setScript(extractCode(accumulated || data.content || ''))
-            setLoading(false)
-            es.close()
-          } else if (data.type === 'error') {
-            setError(data.content || data.message || 'Stream error')
-            setLoading(false)
-            es.close()
+          } else if (event.type === 'done') {
+            setScript(extractCode(accumulated))
+            break
+          } else if (event.type === 'error') {
+            setError(event.content || 'Stream error')
+            break
           }
-        } catch {
-          accumulated += event.data
-          setScript(accumulated)
         }
-      }
-
-      es.onerror = () => {
-        if (accumulated) {
-          setScript(extractCode(accumulated))
-        } else {
-          setError('Connection lost. Check your API key and try again.')
+        if (!error) setScript(prev => extractCode(prev))
+      } catch (err) {
+        if (err instanceof Error && err.name !== 'AbortError') {
+          setError(err.message)
         }
+      } finally {
         setLoading(false)
-        es.close()
-        eventSourceRef.current = null
       }
     } else {
       try {
-        const result = await api.simple.generate(
-          { goal: goal.trim(), mode: 'simple' },
-          llmConfig
-        )
+        const result = await api.simple.generate(userInput, llmConfig)
         setScript(extractCode(result.script))
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Generation failed')
@@ -81,10 +103,10 @@ export default function SimplePage() {
         setLoading(false)
       }
     }
-  }, [goal, llmConfig, streamMode])
+  }, [goal, llmConfig, streamMode, error, carriers, aspiration])
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10 space-y-8">
+    <div className="max-w-5xl mx-auto px-6 py-10 space-y-6">
       <div>
         <div className="flex items-center gap-3 mb-2">
           <div className="p-2 bg-emerald-500/10 rounded-lg">
@@ -93,17 +115,52 @@ export default function SimplePage() {
           <h1 className="text-2xl font-bold text-zinc-100">Simple Mode</h1>
         </div>
         <p className="text-zinc-400 text-sm ml-12">
-          Describe your procedure and get a PyHamilton script instantly. No validation pipeline — fast and direct.
+          Configure your deck, describe your procedure, and get a PyHamilton script instantly.
         </p>
       </div>
 
+      {/* Deck Layout Section */}
+      <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden">
+        <button
+          onClick={() => setShowDeck(!showDeck)}
+          className="w-full flex items-center justify-between px-5 py-3.5 hover:bg-zinc-800/50 transition-colors"
+        >
+          <span className="text-sm font-medium text-zinc-300">Deck Layout &amp; Settings</span>
+          {showDeck
+            ? <ChevronUp className="w-4 h-4 text-zinc-500" />
+            : <ChevronDown className="w-4 h-4 text-zinc-500" />
+          }
+        </button>
+        <AnimatePresence>
+          {showDeck && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="overflow-hidden"
+            >
+              <div className="px-5 pb-5 space-y-5 border-t border-zinc-800">
+                <div className="pt-4">
+                  <DeckLayout carriers={carriers} onChange={setCarriers} />
+                </div>
+                <div className="border-t border-zinc-800 pt-4">
+                  <AspirationSettings settings={aspiration} onChange={setAspiration} />
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Protocol Input */}
       <div className="space-y-4">
         <textarea
           value={goal}
           onChange={(e) => setGoal(e.target.value)}
           placeholder="Describe your liquid handling procedure…"
-          rows={6}
-          className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none text-sm leading-relaxed font-mono"
+          rows={5}
+          className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/50 resize-none text-sm leading-relaxed"
         />
 
         <div className="flex items-center justify-between">
@@ -113,17 +170,13 @@ export default function SimplePage() {
               role="switch"
               aria-checked={streamMode}
               onClick={() => setStreamMode(!streamMode)}
-              className={`
-                relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors
-                ${streamMode ? 'bg-emerald-600' : 'bg-zinc-700'}
-              `}
+              className={`relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors ${
+                streamMode ? 'bg-emerald-600' : 'bg-zinc-700'
+              }`}
             >
-              <span
-                className={`
-                  inline-block h-4 w-4 rounded-full bg-white shadow-sm transition-transform
-                  ${streamMode ? 'translate-x-4' : 'translate-x-0.5'}
-                `}
-              />
+              <span className={`inline-block h-4 w-4 rounded-full bg-white shadow-sm transition-transform ${
+                streamMode ? 'translate-x-4' : 'translate-x-0.5'
+              }`} />
             </button>
             <span className="text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors">
               Stream output

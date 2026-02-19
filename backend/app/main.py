@@ -5,6 +5,7 @@ from app.api.routes.simple import router as simple_router
 from app.api.routes.developer import router as developer_router
 from app.api.routes.agentic import router as agentic_router
 from app.api.routes.config_routes import router as config_router
+from app.api.routes.deck import router as deck_router
 
 app = FastAPI(
     title="PyHamilton Automation Agent",
@@ -24,6 +25,7 @@ app.include_router(simple_router)
 app.include_router(developer_router)
 app.include_router(agentic_router)
 app.include_router(config_router)
+app.include_router(deck_router)
 
 
 @app.get("/")
