@@ -1,44 +1,70 @@
 import type { AgenticPhase, DeckConfig } from '@/types'
+import type { CarrierTypeResponse, LabwareTypeResponse } from '@/lib/api/repositories'
 
-/**
- * Static validation prompts for each phase.
- * These are system-defined prompts that validate the current state of each step.
- */
+export interface ValidationState {
+  deckConfig?: DeckConfig | null
+  procedureDraft?: string
+  carriers?: CarrierTypeResponse[]
+  labwareTypes?: LabwareTypeResponse[]
+}
+
+function formatCarrierList(carriers: CarrierTypeResponse[]): string {
+  if (!carriers.length) return '(no carriers loaded)'
+  return carriers
+    .map(c => `- ${c.code} (${c.name}): ${c.num_slots} slots, accepts [${c.accepts.join(', ')}]`)
+    .join('\n')
+}
+
+function formatLabwareList(labwareTypes: LabwareTypeResponse[]): string {
+  if (!labwareTypes.length) return '(no labware types loaded)'
+  return labwareTypes
+    .map(lt => `- ${lt.code} (${lt.name}, category: ${lt.category})`)
+    .join('\n')
+}
+
 export const VALIDATION_PROMPTS: Record<
   AgenticPhase,
-  (state: { deckConfig?: DeckConfig | null; procedureDraft?: string }) => {
-    prompt: string
-    description: string
-  }
+  (state: ValidationState) => { prompt: string; description: string }
 > = {
-  deck_layout: ({ deckConfig }) => ({
+  deck_layout: ({ deckConfig, carriers = [], labwareTypes = [] }) => ({
     description: 'Validates that the deck layout is properly configured',
     prompt: deckConfig
       ? `Validate the following Hamilton deck layout configuration:
 
 ${JSON.stringify(deckConfig, null, 2)}
 
+The following carrier types are available in this system:
+${formatCarrierList(carriers)}
+
+The following labware types are available in this system:
+${formatLabwareList(labwareTypes)}
+
 Check for:
 1. Carrier placement conflicts (overlapping rail positions)
-2. Proper labware types in appropriate carriers
+2. Each carrier only contains labware it accepts (see accepted types above)
 3. At least one tip rack is configured
-4. No empty slots between carriers on the same rail
+4. All labware codes used in slots match codes in the available labware list above
 5. Aspiration settings are reasonable
 
-Respond with a JSON object:
-{
-  "valid": boolean,
-  "feedback": string (explain any issues or confirm everything looks good)
-}`
+Respond with:
+VALID
+<feedback explaining what looks good>
+
+or:
+INVALID
+<specific issues found>`
       : 'No deck layout configured yet. Please add carriers and labware to the deck.',
   }),
 
-  procedure: ({ procedureDraft }) => ({
+  procedure: ({ procedureDraft, labwareTypes = [] }) => ({
     description: 'Validates that the procedure is clearly defined',
     prompt: procedureDraft
       ? `Validate the following procedure draft:
 
 ${procedureDraft}
+
+Available labware types in this system for reference:
+${formatLabwareList(labwareTypes)}
 
 Check for:
 1. Clear, step-by-step instructions
@@ -47,11 +73,13 @@ Check for:
 4. Logical flow of operations
 5. No ambiguous instructions
 
-Respond with a JSON object:
-{
-  "valid": boolean,
-  "feedback": string (explain any issues or confirm the procedure is clear)
-}`
+Respond with:
+VALID
+<feedback confirming the procedure is clear>
+
+or:
+INVALID
+<specific issues found>`
       : 'No procedure defined yet. Please describe the step-by-step protocol.',
   }),
 
@@ -61,12 +89,9 @@ Respond with a JSON object:
   }),
 }
 
-/**
- * Get the validation prompt for a phase with current state
- */
 export function getValidationPrompt(
   phase: AgenticPhase,
-  state: { deckConfig?: DeckConfig | null; procedureDraft?: string }
+  state: ValidationState
 ): { prompt: string; description: string } {
   return VALIDATION_PROMPTS[phase](state)
 }

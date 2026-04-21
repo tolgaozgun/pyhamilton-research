@@ -15,13 +15,14 @@ import { getValidationPrompt } from './AgenticPage/validationPrompts'
 import { PhaseStepper } from './AgenticPage/components/PhaseStepper'
 import { ProcedureDraftInput } from './AgenticPage/components/ProcedureDraftInput'
 import { StepChatPanel } from './AgenticPage/components/StepChatPanel'
-import { StepFooter, type ValidationState } from './AgenticPage/components/StepFooter'
+import { StepFooter, type ValidationState as StepValidationState } from './AgenticPage/components/StepFooter'
 import { GenerationStep } from './AgenticPage/components/GenerationStep'
 import { ExportPanel } from './AgenticPage/components/ExportPanel'
 import { useAPIConfigured } from '@/hooks/useAPIConfigured'
 import { SetupPrompt } from '@/components/SetupPrompt'
 import { useSettings, useAgentic } from '@/lib/hooks'
 import { useRAG } from '@/lib/hooks/useRAG'
+import { apiRepository, type CarrierTypeResponse, type LabwareTypeResponse } from '@/lib/api/repositories'
 
 // ─── constants ───────────────────────────────────────────────────────────────────
 
@@ -42,6 +43,8 @@ export default function AgenticPage() {
   const { vectorStores, fetchVectorStores } = useRAG()
 
   const [selectedVectorStoreId, setSelectedVectorStoreId] = useState<string>('')
+  const [availableCarriers, setAvailableCarriers] = useState<CarrierTypeResponse[]>([])
+  const [availableLabwareTypes, setAvailableLabwareTypes] = useState<LabwareTypeResponse[]>([])
 
   // Get active provider configuration from database
   const [activeProviderConfig, setActiveProviderConfig] = useState<LLMConfig>({
@@ -51,10 +54,12 @@ export default function AgenticPage() {
     max_tokens: 4096,
   })
 
-  // Fetch active provider configuration and vector stores on mount
+  // Fetch active provider configuration, vector stores, and labware on mount
   useEffect(() => {
     getActiveProvider().catch(console.error)
     fetchVectorStores().catch(console.error)
+    apiRepository.labware.getCarriers().then(setAvailableCarriers).catch(console.error)
+    apiRepository.labware.getLabwareTypes().then(setAvailableLabwareTypes).catch(console.error)
   }, [getActiveProvider, fetchVectorStores])
 
   // Sync active provider into local LLMConfig whenever it changes
@@ -88,7 +93,7 @@ export default function AgenticPage() {
     generation: '',
   })
   // per-phase validation
-  const [validationState, setValidationState] = useState<Record<AgenticPhase, ValidationState>>({
+  const [validationState, setValidationState] = useState<Record<AgenticPhase, StepValidationState>>({
     deck_layout: 'idle',
     procedure: 'idle',
     generation: 'idle',
@@ -133,9 +138,11 @@ export default function AgenticPage() {
     const { prompt, description } = getValidationPrompt(targetPhase, {
       deckConfig,
       procedureDraft,
+      carriers: availableCarriers,
+      labwareTypes: availableLabwareTypes,
     })
     return { prompt, description }
-  }, [deckConfig, procedureDraft])
+  }, [deckConfig, procedureDraft, availableCarriers, availableLabwareTypes])
 
   // ── deck change guard ──────────────────────────────────────────────────────
 
@@ -206,6 +213,29 @@ export default function AgenticPage() {
 2. Help design deck layouts with appropriate carriers and labware
 3. Answer questions about Hamilton deck configuration
 4. Suggest optimal carrier placement and labware selection
+
+CRITICAL - MULTIPLE CARRIERS:
+A Hamilton STAR deck holds MULTIPLE carriers simultaneously. Almost every real protocol requires at least 2–3 carriers. Always recommend the full set of carriers the user needs:
+- Tips always go on a dedicated tip carrier
+- Plates always go on a dedicated plate carrier
+- Reservoirs always go on a dedicated reagent carrier
+Never try to fit everything onto a single carrier. The deck has 55 rails; carriers are typically 4–6 rails wide, so there is plenty of room.
+
+CRITICAL - CARRIER COMPATIBILITY RULES (strictly enforce these):
+Each carrier type only accepts specific labware. Never mix incompatible labware into a carrier:
+
+- TIP_CAR_480_A00 (Tip Carrier, 5 slots): accepts ONLY tip racks. NO plates, NO reservoirs.
+- TIP_CAR_288_C00 (Tip Carrier, 3 slots): accepts ONLY tip racks. NO plates, NO reservoirs.
+- PLT_CAR_L5AC_A00 (Plate Carrier, 5 slots): accepts ONLY plates and deep-well plates. NO tips, NO reservoirs.
+- PLT_CAR_P3AC (Plate Carrier, 3 slots portrait): accepts ONLY plates. NO tips, NO reservoirs.
+- RGT_CAR_3R_A00 (Reagent Carrier, 3 slots): accepts ONLY reservoirs/reagent troughs. NO tips, NO plates.
+
+Example of a CORRECT deck for a typical transfer protocol:
+- Carrier 1 (rails 1–6):  TIP_CAR_480_A00 → tip racks only
+- Carrier 2 (rails 7–12): PLT_CAR_L5AC_A00 → source plate, destination plate
+- Carrier 3 (rails 13–18): RGT_CAR_3R_A00 → reagent reservoir
+
+Always suggest separate carriers for each labware category the user needs.
 
 IMPORTANT: You can ONLY help with deck layout configuration. You MUST refuse to:
 - Generate automation procedures or scripts
@@ -299,43 +329,50 @@ If the user asks for anything outside code generation, politely redirect them.`
           console.log('✅ DEBUG - Message appended, checking if phase-specific handling needed')
           console.log('🔍 DEBUG - Current target phase:', target)
 
-          // Check if this is deck_layout phase and handle state updates
-          if (target === 'deck_layout') {
-            console.log('🏗️ DEBUG - This is deck_layout phase, should trigger deck update')
-            console.log('🔧 DEBUG - Current deckConfig state:', deckConfig)
-            console.log('⚠️ DEBUG - Setting default deck config since AI said ready')
-
-            // Set a default deck configuration when AI says it's ready
+          // If deck_layout phase and user hasn't configured a deck yet, seed a valid default
+          if (target === 'deck_layout' && !deckConfig) {
             const defaultDeckConfig: DeckConfig = {
               carriers: [
                 {
                   carrier_type: 'TIP_CAR_480_A00',
                   start_rail: 1,
                   slots: [
-                    { name: 'tip_rack_300', type: 'tip_rack', subtype: '300', contents: undefined },
-                    { name: 'plate_96_well', type: 'plate', subtype: '96', contents: undefined },
-                    { name: 'reservoir_300ml', type: 'reservoir', subtype: '300ml', contents: undefined },
-                    null,
-                    null
-                  ]
-                }
+                    { name: 'Tips 300µL #1', type: 'tip_rack', subtype: 'tips_300ul', contents: undefined },
+                    { name: 'Tips 300µL #2', type: 'tip_rack', subtype: 'tips_300ul', contents: undefined },
+                    null, null, null,
+                  ],
+                },
+                {
+                  carrier_type: 'PLT_CAR_L5AC_A00',
+                  start_rail: 7,
+                  slots: [
+                    { name: 'Source Plate', type: 'plate', subtype: 'plate_96', contents: undefined },
+                    { name: 'Destination Plate', type: 'plate', subtype: 'plate_96', contents: undefined },
+                    null, null, null,
+                  ],
+                },
+                {
+                  carrier_type: 'RGT_CAR_3R_A00',
+                  start_rail: 13,
+                  slots: [
+                    { name: 'Reagent Reservoir', type: 'reservoir', subtype: 'reservoir', contents: undefined },
+                    null, null,
+                  ],
+                },
               ],
               aspiration_settings: {
                 volume_ul: 100,
-                flow_rate_ul_per_s: 50,
-                mix_cycles: 3,
-                mix_volume_ul: 50,
-                liquid_class: 'Standard',
-                tip_type: '300',
+                flow_rate_ul_per_s: 100,
+                mix_cycles: 0,
+                mix_volume_ul: 0,
+                liquid_class: 'Water',
+                tip_type: '300uL',
                 pre_wet: false,
-                touch_off: true
+                touch_off: true,
               },
-              total_rails: 6
+              total_rails: 55,
             }
-
-            console.log('📦 DEBUG - Setting deckConfig to:', defaultDeckConfig)
             setDeckConfig(defaultDeckConfig)
-            console.log('✅ DEBUG - deckConfig state should be updated now')
           }
 
         } else if (response.question) {
@@ -348,14 +385,6 @@ If the user asks for anything outside code generation, politely redirect them.`
           console.log('📄 DEBUG - Full response:', response)
         }
 
-        if (response.ready) {
-          appendMessage(target, {
-            role: 'assistant',
-            content: `Ready to validate.\n${response.summary ?? ''}`,
-          })
-        } else if (response.question) {
-          appendMessage(target, { role: 'assistant', content: response.question })
-        }
       } catch (err) {
         const errorMessage = err instanceof Error ? err.message : 'Chat request failed'
         setError(errorMessage)
