@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { Routes, Route, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Bot, Settings, Layers, Menu, X, Dna, LogOut, Github, Database } from 'lucide-react'
+import { Bot, Settings, Layers, Menu, X, Dna, LogOut, Github, Database, LayoutGrid } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Toaster } from '@/components/ui/toaster'
 import { APIStatusIndicator } from '@/components/APIStatusIndicator'
 import ProtectedRoute from '@/components/ProtectedRoute'
 import AuthPage from '@/pages/AuthPage'
 import AgenticPage from '@/pages/AgenticPage'
+import DeckLayoutPage from '@/pages/DeckLayoutPage'
 import LabwarePage from '@/pages/LabwarePage'
 import RAGPage from '@/pages/RAGPage'
 import SettingsPage from '@/pages/SettingsPage'
@@ -15,6 +16,7 @@ import { useAuth } from '@/lib/hooks/useAuth'
 
 const NAV_ITEMS = [
   { to: '/agentic', icon: Bot, label: 'Agentic' },
+  { to: '/deck-layout', icon: LayoutGrid, label: 'Deck Layout' },
   { to: '/labware', icon: Layers, label: 'Labware' },
   { to: '/knowledge-base', icon: Database, label: 'Knowledge Base' },
   { to: '/settings', icon: Settings, label: 'Settings' },
@@ -179,6 +181,14 @@ export default function App() {
                   element={
                     <ProtectedRoute>
                       <AgenticPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/deck-layout"
+                  element={
+                    <ProtectedRoute>
+                      <DeckLayoutPage />
                     </ProtectedRoute>
                   }
                 />

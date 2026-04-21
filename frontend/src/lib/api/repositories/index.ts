@@ -1,4 +1,4 @@
-import { BaseRepository } from '../repository'
+import { BaseRepository, AuthenticatedRepository } from '../repository'
 import type {
   LLMConfig,
   UserInput,
@@ -18,6 +18,8 @@ import type {
   VectorStore,
   VectorStoreFile,
   RAGSearchResult,
+  UserDeckLayout,
+  DeckLayoutValidationResult,
 } from '@/types'
 
 // ─── Deck Repository ─────────────────────────────────────────────────────────────
@@ -345,6 +347,42 @@ export class RAGRepository extends BaseRepository {
   }
 }
 
+// ─── Deck Layout Repository ───────────────────────────────────────────────────
+
+export class DeckLayoutRepository extends AuthenticatedRepository {
+  async list(): Promise<UserDeckLayout[]> {
+    return this.get<UserDeckLayout[]>('/api/deck-layouts')
+  }
+
+  async getById(id: number): Promise<UserDeckLayout> {
+    return this.get<UserDeckLayout>(`/api/deck-layouts/${id}`)
+  }
+
+  async create(payload: { name: string; description?: string; configuration: DeckConfig }): Promise<UserDeckLayout> {
+    return this.post<UserDeckLayout>('/api/deck-layouts', payload)
+  }
+
+  async update(id: number, payload: Partial<{ name: string; description: string; configuration: DeckConfig }>): Promise<UserDeckLayout> {
+    return this.put<UserDeckLayout>(`/api/deck-layouts/${id}`, payload)
+  }
+
+  async remove(id: number): Promise<void> {
+    await this.delete(`/api/deck-layouts/${id}`)
+  }
+
+  async importJson(name: string, file: File, description?: string): Promise<UserDeckLayout> {
+    const formData = new FormData()
+    formData.append('file', file)
+    const params = new URLSearchParams({ name })
+    if (description) params.append('description', description)
+    return this.post<UserDeckLayout>(`/api/deck-layouts/import/json?${params.toString()}`, formData)
+  }
+
+  async validate(id: number): Promise<DeckLayoutValidationResult> {
+    return this.post<DeckLayoutValidationResult>(`/api/deck-layouts/${id}/validate`, {})
+  }
+}
+
 // ─── API Facade ───────────────────────────────────────────────────────────────────
 
 export class ApiRepository {
@@ -357,6 +395,7 @@ export class ApiRepository {
   readonly health = new HealthRepository()
   readonly labware = new LabwareRepository()
   readonly rag = new RAGRepository()
+  readonly deckLayouts = new DeckLayoutRepository()
 }
 
 // Singleton instance

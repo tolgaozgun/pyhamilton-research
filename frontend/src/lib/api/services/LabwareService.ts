@@ -91,27 +91,20 @@ export class LabwareService extends AuthenticatedRepository {
 // Export singleton instance
 export const labwareService = new LabwareService()
 
-// ─── Labware Item Service (public CRUD — no auth required) ────────────────────
-import { BaseRepository } from '../repository'
+// ─── Labware Item Service (LabwareType-backed CRUD) ──────────────────────────
 
 export interface LabwareItem {
   id: number
   name: string
-  type: string
-  subtype: string | null
-  description: string
-  wells: number | null
-  volume: number | null
-  height: number | null
-  color: string
-  icon: string
+  code: string
+  category: string
+  description: string | null
+  properties: Record<string, unknown> | null
   is_active: boolean
-  created_at: string
-  updated_at: string
 }
 
-export class LabwareItemService extends BaseRepository {
-  private readonly baseUrl = '/api/labware'
+export class LabwareItemService extends AuthenticatedRepository {
+  private readonly baseUrl = '/api/labware/labware-types'
 
   async getAll(): Promise<LabwareItem[]> {
     const result = await this.get<{ data: LabwareItem[] } | LabwareItem[]>(this.baseUrl)
@@ -128,10 +121,6 @@ export class LabwareItemService extends BaseRepository {
 
   async remove(id: number): Promise<void> {
     return this.delete<void>(`${this.baseUrl}/${id}`)
-  }
-
-  async seed(): Promise<void> {
-    return this.post<void>(`${this.baseUrl}/seed`, {})
   }
 }
 

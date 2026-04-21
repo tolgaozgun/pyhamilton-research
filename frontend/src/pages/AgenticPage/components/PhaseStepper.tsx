@@ -9,17 +9,12 @@ export interface PhaseStepperProps {
   onPhaseSelect: (phase: AgenticPhase) => void
 }
 
-const PHASE_ORDER: AgenticPhase[] = ['deck_layout', 'procedure', 'generation']
+const PHASE_ORDER: AgenticPhase[] = ['procedure', 'generation']
 
 const PHASE_META: Record<
   AgenticPhase,
   { label: string; description: string; icon: LucideIcon }
 > = {
-  deck_layout: {
-    label: 'Deck layout',
-    description: 'Configure and validate the deck before anything else.',
-    icon: Lock,
-  },
   procedure: {
     label: 'Procedure',
     description: 'Define and validate what the script should do.',

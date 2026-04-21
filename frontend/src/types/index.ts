@@ -1,5 +1,5 @@
 export type Mode = 'simple' | 'developer' | 'agentic'
-export type AgenticPhase = 'deck_layout' | 'procedure' | 'generation'
+export type AgenticPhase = 'procedure' | 'generation'
 
 export type Provider = 'google' | 'openai' | 'anthropic' | 'openrouter'
 
@@ -266,6 +266,28 @@ export const PLATE_CATALOG: Record<string, string> = {
 
 export const RESERVOIR_CATALOG: Record<string, string> = {
   trough_300ml: '300mL Trough',
+}
+
+// ─── User Deck Layout types ───────────────────────────────────────────────────
+
+export interface UserDeckLayout {
+  id: number
+  user_id: number
+  name: string
+  description?: string | null
+  configuration: DeckConfig
+  validation_status: 'unvalidated' | 'valid' | 'invalid'
+  validation_feedback?: string | null
+  source: 'manual' | 'imported'
+  source_filename?: string | null
+  created_at: string
+  updated_at: string
+}
+
+export interface DeckLayoutValidationResult {
+  valid: boolean
+  errors: string[]
+  feedback: string
 }
 
 // ─── RAG / Knowledge Base types ──────────────────────────────────────────────

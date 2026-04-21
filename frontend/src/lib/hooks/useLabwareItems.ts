@@ -1,6 +1,6 @@
 /**
  * Labware Items Hook
- * CRUD operations for the LabwarePage's labware items.
+ * CRUD operations for the LabwarePage, backed by LabwareType.
  */
 
 import { useState, useCallback } from 'react'
@@ -13,7 +13,6 @@ export interface UseLabwareItemsReturn {
   createLabware: (data: Partial<LabwareItem>) => Promise<void>
   updateLabware: (id: number, data: Partial<LabwareItem>) => Promise<void>
   deleteLabware: (id: number) => Promise<void>
-  seedLabware: () => Promise<void>
 }
 
 export function useLabwareItems(): UseLabwareItemsReturn {
@@ -45,15 +44,5 @@ export function useLabwareItems(): UseLabwareItemsReturn {
     await fetchLabware()
   }, [fetchLabware])
 
-  const seedLabware = useCallback(async () => {
-    setIsLoading(true)
-    try {
-      await labwareItemService.seed()
-      await fetchLabware()
-    } finally {
-      setIsLoading(false)
-    }
-  }, [fetchLabware])
-
-  return { labware, isLoading, fetchLabware, createLabware, updateLabware, deleteLabware, seedLabware }
+  return { labware, isLoading, fetchLabware, createLabware, updateLabware, deleteLabware }
 }

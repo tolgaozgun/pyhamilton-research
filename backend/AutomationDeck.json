@@ -1,0 +1,4735 @@
+{
+  "header": {
+    "a": 3,
+    "b": 1,
+    "c": 5,
+    "d": 0
+  },
+  "layout": {
+    "deck_ml_star": "\u0000Ó\t\u0000\u0000",
+    "active_layer": "base",
+    "axis": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "deck": "ML_STAR2.dck",
+    "default_wash": "Waste",
+    "instrument": "ML_STAR",
+    "labware": [
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\SMP_CAR_32_12x100_A00.rck",
+        "id": "SMP_CAR_32_12x100_A00_0001",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "1T-51",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1240.0,
+            "y": 542.5,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\SMP_CAR_32_12x100_A00.rck",
+        "id": "SMP_CAR_32_12x100_A00_0002",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "1T-52",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1262.5,
+            "y": 542.5,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\SMP_CAR_32_12x100_A00.rck",
+        "id": "SMP_CAR_32_12x100_A00_0003",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "1T-50",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1217.5,
+            "y": 542.5,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\SMP_CAR_12_29x115_A00.rck",
+        "id": "SMP_CAR_12_29x115_A00_0001",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "2T-53",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1296.05,
+            "y": 506.25,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 90.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "HAMILTON\\Ham_96_FluorMeasure_Black.rck",
+        "id": "Clariostar_standin",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "",
+        "tform": [
+          {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 1585.3,
+            "y": 249.3,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 207.1,
+        "z_trans_value": 2
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{77DF9B91-671E-4974-8380-38AD0B4E0D86}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\CORE\\WasteBlock.tml",
+        "id": "WasteBlock",
+        "inst": "",
+        "is_covered": null,
+        "site_id": "WasteBlock",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1318.0,
+            "y": 115.0,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 2
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\CORE\\teachingneedleblock.rck",
+        "id": "teachingNeedleBlock",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "1",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1326.25,
+            "y": 529.0,
+            "z": 1.0
+          }
+        ],
+        "template": "WasteBlock",
+        "z_trans": 175.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\CORE\\waste2.rck",
+        "id": "Waste",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "2",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1340.0,
+            "y": 405.0,
+            "z": 1.0
+          }
+        ],
+        "template": "WasteBlock",
+        "z_trans": 186.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\CORE\\verification.rck",
+        "id": "RearVerification",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "3",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1330.0,
+            "y": 438.0,
+            "z": 1.0
+          }
+        ],
+        "template": "WasteBlock",
+        "z_trans": 187.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\CORE\\verification.rck",
+        "id": "FrontVerification",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "4",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1330.0,
+            "y": 158.0,
+            "z": 1.0
+          }
+        ],
+        "template": "WasteBlock",
+        "z_trans": 187.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\CORE\\TeachingNeedle5ml.rck",
+        "id": "TeachingNeedle5ml",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "7",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1333.0,
+            "y": 185.0,
+            "z": 1.0
+          }
+        ],
+        "template": "WasteBlock",
+        "z_trans": 210.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{77DF9B91-671E-4974-8380-38AD0B4E0D86}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\96CoReHead\\Core96SlideWaste.tml",
+        "id": "Core96SlideWaste_0001",
+        "inst": "",
+        "is_covered": null,
+        "site_id": "96CORESlideWaste",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": -385.0,
+            "y": -9.45,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 2
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\96CoReHead\\core96slidewaste.rck",
+        "id": "core96slidewaste_0001",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "1",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": -42.0,
+            "y": 120.3,
+            "z": 1.0
+          }
+        ],
+        "template": "Core96SlideWaste_0001",
+        "z_trans": 227.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{77DF9B91-671E-4974-8380-38AD0B4E0D86}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\TIP_CAR_480_A00.tml",
+        "id": "TIP_CAR_480_A00_0001",
+        "inst": "",
+        "is_covered": null,
+        "site_id": "6T-1",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 100.0,
+            "y": 63.0,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 2
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\HT_L.rck",
+        "id": "HT_L_0001",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "1",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 117.9,
+            "y": 529.8,
+            "z": 1.0
+          }
+        ],
+        "template": "TIP_CAR_480_A00_0001",
+        "z_trans": 214.95,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{77DF9B91-671E-4974-8380-38AD0B4E0D86}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\PLT_CAR_L5_DWP.tml",
+        "id": "PLT_CAR_L5_DWP_0001",
+        "inst": "",
+        "is_covered": null,
+        "site_id": "6T-15",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 415.0,
+            "y": 63.0,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 2
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "Hamilton\\Ham_96_FluorMeasure_Black.rck",
+        "id": "Ham_96_FluorMeasure_Black_0001",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "4",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 433.0,
+            "y": 242.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L5_DWP_0001",
+        "z_trans": 181.77,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{77DF9B91-671E-4974-8380-38AD0B4E0D86}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\PLT_CAR_L5_DWP.tml",
+        "id": "PLT_CAR_L5_DWP_0002",
+        "inst": "",
+        "is_covered": null,
+        "site_id": "6T-22",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 572.5,
+            "y": 63.0,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 2
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "HAMILTON\\Ham_250ml_RGT_L.rck",
+        "id": "Ham_250ml_RGT_L_0001",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "3",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 638.5,
+            "y": 338.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L5_DWP_0002",
+        "z_trans": 181.77,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "HAMILTON\\HAM_DW_22_ml.rck",
+        "id": "HAM_DW_22_ml_0001",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "4",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 590.5,
+            "y": 242.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L5_DWP_0002",
+        "z_trans": 181.77,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{77DF9B91-671E-4974-8380-38AD0B4E0D86}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\AutoLys\\PLT_CAR_L4_HHS-ALT_A00.tml",
+        "id": "PLT_CAR_L4_HHS_ALT_A00_0002",
+        "inst": "",
+        "is_covered": null,
+        "site_id": "7T-29",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 730.0,
+            "y": 63.0,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 2
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\AutoLys\\Ham_24_Adp_HHS-AutoLys_A00.rck",
+        "id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "1",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 759.5,
+            "y": 512.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L4_HHS_ALT_A00_0002",
+        "z_trans": 183.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\AutoLys\\Ham_24_Adp_HHS-AutoLys_A00.rck",
+        "id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "2",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 759.5,
+            "y": 392.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L4_HHS_ALT_A00_0002",
+        "z_trans": 183.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\AutoLys\\Ham_24_Adp_HHS-AutoLys_A00.rck",
+        "id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "3",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 759.5,
+            "y": 272.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L4_HHS_ALT_A00_0002",
+        "z_trans": 183.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\AutoLys\\Ham_24_Adp_HHS-AutoLys_A00.rck",
+        "id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "4",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 759.5,
+            "y": 152.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L4_HHS_ALT_A00_0002",
+        "z_trans": 183.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{77DF9B91-671E-4974-8380-38AD0B4E0D86}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\AutoLys\\PLT_CAR_L4_HHS-ALT_A00.tml",
+        "id": "PLT_CAR_L4_HHS_ALT_A00_0001",
+        "inst": "",
+        "is_covered": null,
+        "site_id": "7T-36",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 887.5,
+            "y": 63.0,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 2
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\AutoLys\\Ham_24_Adp_HHS-AutoLys_A00.rck",
+        "id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "1",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 917.0,
+            "y": 512.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L4_HHS_ALT_A00_0001",
+        "z_trans": 183.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\AutoLys\\Ham_24_Adp_HHS-AutoLys_A00.rck",
+        "id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "2",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 917.0,
+            "y": 392.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L4_HHS_ALT_A00_0001",
+        "z_trans": 183.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\AutoLys\\Ham_24_Adp_HHS-AutoLys_A00.rck",
+        "id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "3",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 917.0,
+            "y": 272.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L4_HHS_ALT_A00_0001",
+        "z_trans": 183.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{8E1D6C02-F939-11D1-8D14-008029ED67EA}",
+        "def_seq_valid": 1,
+        "file": "ML_STAR\\AutoLys\\Ham_24_Adp_HHS-AutoLys_A00.rck",
+        "id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+        "inst": "",
+        "is_covered": 0,
+        "site_id": "4",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 917.0,
+            "y": 152.5,
+            "z": 1.0
+          }
+        ],
+        "template": "PLT_CAR_L4_HHS_ALT_A00_0001",
+        "z_trans": 183.0,
+        "z_trans_value": 1
+      },
+      {
+        "angle": 0.0,
+        "barcode_cnt": 0,
+        "clsid": "{77DF9B91-671E-4974-8380-38AD0B4E0D86}",
+        "def_seq_valid": 0,
+        "file": "ML_STAR\\PLT_CAR_L5_DWP.tml",
+        "id": "PLT_CAR_L5_DWP_0003",
+        "inst": "",
+        "is_covered": null,
+        "site_id": "6T-44",
+        "tform": [
+          {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          {
+            "x": 1067.5,
+            "y": 63.0,
+            "z": 1.0
+          }
+        ],
+        "template": "default",
+        "z_trans": 100.0,
+        "z_trans_value": 2
+      }
+    ],
+    "layer": [
+      {
+        "name": "base",
+        "viz": 1,
+        "labware_cnt": 32,
+        "seq_cnt": 23,
+        "items": [
+          {
+            "labware_name": "PLT_CAR_L4_HHS_ALT_A00_0002",
+            "seq_name": "Ham_24_Adp_HHS_AutoLys_A00_0005"
+          },
+          {
+            "labware_name": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "seq_name": "Ham_24_Adp_HHS_AutoLys_A00_0006"
+          },
+          {
+            "labware_name": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "seq_name": "Ham_24_Adp_HHS_AutoLys_A00_0007"
+          },
+          {
+            "labware_name": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "seq_name": "Ham_24_Adp_HHS_AutoLys_A00_0008"
+          },
+          {
+            "labware_name": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "seq_name": "Ham_24_Adp_HHS_AutoLys_A00_0001"
+          },
+          {
+            "labware_name": "PLT_CAR_L4_HHS_ALT_A00_0001",
+            "seq_name": "Ham_24_Adp_HHS_AutoLys_A00_0002"
+          },
+          {
+            "labware_name": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "seq_name": "Ham_24_Adp_HHS_AutoLys_A00_0003"
+          },
+          {
+            "labware_name": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "seq_name": "Ham_24_Adp_HHS_AutoLys_A00_0004"
+          },
+          {
+            "labware_name": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "seq_name": "SMP_CAR_12_29x115_A00_0001"
+          },
+          {
+            "labware_name": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "seq_name": "Waste16"
+          },
+          {
+            "labware_name": "SMP_CAR_12_29x115_A00_0001",
+            "seq_name": "Ham_250ml_RGT_L_0001"
+          },
+          {
+            "labware_name": "Core96SlideWaste_0001",
+            "seq_name": "MlStar1000ulHighVolumeTip"
+          },
+          {
+            "labware_name": "Ham_250ml_RGT_L_0001",
+            "seq_name": "core96slidewaste_0001"
+          },
+          {
+            "labware_name": "core96slidewaste_0001",
+            "seq_name": "Waste12"
+          },
+          {
+            "labware_name": "default",
+            "seq_name": "Waste"
+          },
+          {
+            "labware_name": "teachingNeedleBlock",
+            "seq_name": "Waste04"
+          },
+          {
+            "labware_name": "TeachingNeedle5ml",
+            "seq_name": "SMP_CAR_32_12x100_A00_0001"
+          },
+          {
+            "labware_name": "Waste",
+            "seq_name": "SMP_CAR_32_12x100_A00_0002"
+          },
+          {
+            "labware_name": "PLT_CAR_L5_DWP_0003",
+            "seq_name": "SMP_CAR_32_12x100_A00_0003"
+          },
+          {
+            "labware_name": "HT_L_0001",
+            "seq_name": "Clariostar_standin"
+          },
+          {
+            "labware_name": "PLT_CAR_L5_DWP_0002",
+            "seq_name": "Ham_96_FluorMeasure_Black_0001"
+          },
+          {
+            "labware_name": "SMP_CAR_32_12x100_A00_0001",
+            "seq_name": "HAM_DW_22_ml_0001"
+          },
+          {
+            "labware_name": "SMP_CAR_32_12x100_A00_0002",
+            "seq_name": "Waste08"
+          },
+          {
+            "labware_name": "SMP_CAR_32_12x100_A00_0003",
+            "seq_name": null
+          },
+          {
+            "labware_name": "Clariostar_standin",
+            "seq_name": null
+          },
+          {
+            "labware_name": "PLT_CAR_L5_DWP_0001",
+            "seq_name": null
+          },
+          {
+            "labware_name": "Ham_96_FluorMeasure_Black_0001",
+            "seq_name": null
+          },
+          {
+            "labware_name": "FrontVerification",
+            "seq_name": null
+          },
+          {
+            "labware_name": "TIP_CAR_480_A00_0001",
+            "seq_name": null
+          },
+          {
+            "labware_name": "HAM_DW_22_ml_0001",
+            "seq_name": null
+          },
+          {
+            "labware_name": "RearVerification",
+            "seq_name": null
+          },
+          {
+            "labware_name": "WasteBlock",
+            "seq_name": null
+          }
+        ]
+      }
+    ],
+    "seq": [
+      {
+        "name": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+        "cnt": 24,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0005",
+            "pos_id": "D6"
+          }
+        ]
+      },
+      {
+        "name": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+        "cnt": 24,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0006",
+            "pos_id": "D6"
+          }
+        ]
+      },
+      {
+        "name": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+        "cnt": 24,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0007",
+            "pos_id": "D6"
+          }
+        ]
+      },
+      {
+        "name": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+        "cnt": 24,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0008",
+            "pos_id": "D6"
+          }
+        ]
+      },
+      {
+        "name": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+        "cnt": 24,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0001",
+            "pos_id": "D6"
+          }
+        ]
+      },
+      {
+        "name": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+        "cnt": 24,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0002",
+            "pos_id": "D6"
+          }
+        ]
+      },
+      {
+        "name": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+        "cnt": 24,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0003",
+            "pos_id": "D6"
+          }
+        ]
+      },
+      {
+        "name": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+        "cnt": 24,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Ham_24_Adp_HHS_AutoLys_A00_0004",
+            "pos_id": "D6"
+          }
+        ]
+      },
+      {
+        "name": "SMP_CAR_12_29x115_A00_0001",
+        "cnt": 12,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "2"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "4"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "SMP_CAR_12_29x115_A00_0001",
+            "pos_id": "12"
+          }
+        ]
+      },
+      {
+        "name": "Waste16",
+        "cnt": 16,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Waste",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "2"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "4"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "13"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "15"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "16"
+          }
+        ]
+      },
+      {
+        "name": "Ham_250ml_RGT_L_0001",
+        "cnt": 16,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "2"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "4"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "13"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "15"
+          },
+          {
+            "obj_id": "Ham_250ml_RGT_L_0001",
+            "pos_id": "16"
+          }
+        ]
+      },
+      {
+        "name": "MlStar1000ulHighVolumeTip",
+        "cnt": 96,
+        "read_only": 1,
+        "items": [
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "2"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "4"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "13"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "15"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "16"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "17"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "18"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "19"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "20"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "21"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "22"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "23"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "24"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "25"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "26"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "27"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "28"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "29"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "30"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "31"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "32"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "33"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "34"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "35"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "36"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "37"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "38"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "39"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "40"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "41"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "42"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "43"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "44"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "45"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "46"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "47"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "48"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "49"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "50"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "51"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "52"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "53"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "54"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "55"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "56"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "57"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "58"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "59"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "60"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "61"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "62"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "63"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "64"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "65"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "66"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "67"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "68"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "69"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "70"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "71"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "72"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "73"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "74"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "75"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "76"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "77"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "78"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "79"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "80"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "81"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "82"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "83"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "84"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "85"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "86"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "87"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "88"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "89"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "90"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "91"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "92"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "93"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "94"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "95"
+          },
+          {
+            "obj_id": "HT_L_0001",
+            "pos_id": "96"
+          }
+        ]
+      },
+      {
+        "name": "core96slidewaste_0001",
+        "cnt": 96,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "2"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "4"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "13"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "15"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "16"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "17"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "18"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "19"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "20"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "21"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "22"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "23"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "24"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "25"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "26"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "27"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "28"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "29"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "30"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "31"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "32"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "33"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "34"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "35"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "36"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "37"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "38"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "39"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "40"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "41"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "42"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "43"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "44"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "45"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "46"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "47"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "48"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "49"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "50"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "51"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "52"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "53"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "54"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "55"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "56"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "57"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "58"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "59"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "60"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "61"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "62"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "63"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "64"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "65"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "66"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "67"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "68"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "69"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "70"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "71"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "72"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "73"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "74"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "75"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "76"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "77"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "78"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "79"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "80"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "81"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "82"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "83"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "84"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "85"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "86"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "87"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "88"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "89"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "90"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "91"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "92"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "93"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "94"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "95"
+          },
+          {
+            "obj_id": "core96slidewaste_0001",
+            "pos_id": "96"
+          }
+        ]
+      },
+      {
+        "name": "Waste12",
+        "cnt": 12,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Waste",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "16"
+          }
+        ]
+      },
+      {
+        "name": "Waste",
+        "cnt": 16,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Waste",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "2"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "4"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "13"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "15"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "16"
+          }
+        ]
+      },
+      {
+        "name": "Waste04",
+        "cnt": 4,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Waste",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "16"
+          }
+        ]
+      },
+      {
+        "name": "SMP_CAR_32_12x100_A00_0001",
+        "cnt": 32,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "2"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "4"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "13"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "15"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "16"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "17"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "18"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "19"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "20"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "21"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "22"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "23"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "24"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "25"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "26"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "27"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "28"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "29"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "30"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "31"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0001",
+            "pos_id": "32"
+          }
+        ]
+      },
+      {
+        "name": "SMP_CAR_32_12x100_A00_0002",
+        "cnt": 32,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "2"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "4"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "13"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "15"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "16"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "17"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "18"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "19"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "20"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "21"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "22"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "23"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "24"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "25"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "26"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "27"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "28"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "29"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "30"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "31"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0002",
+            "pos_id": "32"
+          }
+        ]
+      },
+      {
+        "name": "SMP_CAR_32_12x100_A00_0003",
+        "cnt": 32,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "2"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "4"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "6"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "8"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "9"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "11"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "13"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "15"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "16"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "17"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "18"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "19"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "20"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "21"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "22"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "23"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "24"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "25"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "26"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "27"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "28"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "29"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "30"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "31"
+          },
+          {
+            "obj_id": "SMP_CAR_32_12x100_A00_0003",
+            "pos_id": "32"
+          }
+        ]
+      },
+      {
+        "name": "Clariostar_standin",
+        "cnt": 96,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E1"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F1"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G1"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H1"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E2"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F2"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G2"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H2"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E3"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F3"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G3"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H3"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E4"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F4"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G4"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H4"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E5"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F5"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G5"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H5"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D6"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E6"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F6"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G6"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H6"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A7"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B7"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C7"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D7"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E7"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F7"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G7"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H7"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A8"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B8"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C8"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D8"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E8"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F8"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G8"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H8"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A9"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B9"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C9"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D9"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E9"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F9"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G9"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H9"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A10"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B10"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C10"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D10"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E10"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F10"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G10"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H10"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A11"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B11"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C11"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D11"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E11"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F11"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G11"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H11"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "A12"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "B12"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "C12"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "D12"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "E12"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "F12"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "G12"
+          },
+          {
+            "obj_id": "Clariostar_standin",
+            "pos_id": "H12"
+          }
+        ]
+      },
+      {
+        "name": "Ham_96_FluorMeasure_Black_0001",
+        "cnt": 96,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E1"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F1"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G1"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H1"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E2"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F2"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G2"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H2"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E3"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F3"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G3"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H3"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E4"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F4"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G4"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H4"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E5"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F5"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G5"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H5"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D6"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E6"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F6"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G6"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H6"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A7"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B7"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C7"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D7"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E7"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F7"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G7"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H7"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A8"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B8"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C8"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D8"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E8"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F8"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G8"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H8"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A9"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B9"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C9"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D9"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E9"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F9"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G9"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H9"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A10"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B10"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C10"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D10"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E10"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F10"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G10"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H10"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A11"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B11"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C11"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D11"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E11"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F11"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G11"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H11"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "A12"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "B12"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "C12"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "D12"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "E12"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "F12"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "G12"
+          },
+          {
+            "obj_id": "Ham_96_FluorMeasure_Black_0001",
+            "pos_id": "H12"
+          }
+        ]
+      },
+      {
+        "name": "HAM_DW_22_ml_0001",
+        "cnt": 96,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A1"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B1"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C1"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D1"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E1"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F1"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G1"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H1"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A2"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B2"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C2"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D2"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E2"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F2"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G2"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H2"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A3"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B3"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C3"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D3"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E3"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F3"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G3"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H3"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A4"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B4"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C4"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D4"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E4"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F4"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G4"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H4"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A5"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B5"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C5"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D5"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E5"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F5"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G5"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H5"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A6"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B6"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C6"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D6"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E6"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F6"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G6"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H6"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A7"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B7"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C7"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D7"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E7"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F7"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G7"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H7"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A8"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B8"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C8"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D8"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E8"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F8"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G8"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H8"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A9"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B9"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C9"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D9"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E9"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F9"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G9"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H9"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A10"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B10"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C10"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D10"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E10"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F10"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G10"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H10"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A11"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B11"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C11"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D11"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E11"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F11"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G11"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H11"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "A12"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "B12"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "C12"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "D12"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "E12"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "F12"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "G12"
+          },
+          {
+            "obj_id": "HAM_DW_22_ml_0001",
+            "pos_id": "H12"
+          }
+        ]
+      },
+      {
+        "name": "Waste08",
+        "cnt": 8,
+        "read_only": 0,
+        "items": [
+          {
+            "obj_id": "Waste",
+            "pos_id": "1"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "3"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "5"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "7"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "10"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "12"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "14"
+          },
+          {
+            "obj_id": "Waste",
+            "pos_id": "16"
+          }
+        ]
+      }
+    ],
+    "phoenix_version": "6.2.3.50015",
+    "use_global_tpl": 0,
+    "view_angle": 0,
+    "data_version": 3
+  },
+  "metadata": {
+    "author": "pavdiuni",
+    "valid": 0,
+    "time": "2025-12-19 17:51",
+    "checksum": "dc4afae7",
+    "length": "086"
+  },
+  "tail_tokens": [
+    "DEVICE,ML_STAR",
+    "\u0000\u0007",
+    "",
+    "",
+    "",
+    "3DVIEWSETTINGS",
+    "0.01;1;2.090752;1;0/0/0;0/0/243.968;0.707106709480286/0/0/-0.70710676908493;-0.382683426141739/0/0/0.923879504203796",
+    "ORGX",
+    "0",
+    "ORGY",
+    "0",
+    "ORGZ",
+    "80",
+    "REG",
+    "ML_STAR",
+    "ROT",
+    "0",
+    "TYPE",
+    "1",
+    "LABWAREPROPERTIES,ML_STAR",
+    "\u0000",
+    "\u0000\u0000\u0000\r1.1.InitValue\u00010\f1.1.Pro",
+    "erty\n-534183694\u000e1.10.InitValue\u00010\r1.10.Property\u0016GruCommandTeachingData\u000e1.11.InitValue\u00010\r1.11.Property\u000eInversGripp",
+    "ng\u000e1.12.InitValue\u00010\r1.12.Property\u0012LabwareOrientation\r1.2.InitValue\u00010\f1.2.Property\n-534183744\r1.3.InitValu",
+    "\u00010\f1.3.Property\n-534183747\r1.4.InitValue\u00010\f1.4.Property\n-534183773\r1.5.InitValue\u00010\f1.5.Property\n-5341",
+    "3774\r1.6.InitValue\u00010\f1.6.Property\n-534183775\r1.7.InitVal",
+    "e\u00010\f1.7.Property\u000eGrippLargeSite\r1.8.InitValue\u00010\f1.8.Property\u0013GripperAccessHeight\r1.9.InitValue\u00010\f1.9.Property\fGripper",
+    "otel\f1.NumOfProps\u000212\b1.ProgID\u0013HxLabwr2.RectRack.1\tNumOfObjs\u00011\u0011RESOURCES,",
+    "efault\u0001\u0000\n\u0000\u0000\u0000\u00051.CAP\u00011\u00071.COLOR\b16711680\u00051.DEV\u00010\u000b1.LABWAREID\u0000\t1.MAPTYPE\u0002-1\u00071.RFILE\u0010ML_STAR_side.png\u00051.R",
+    "D\u0007ML_STAR\u00071.RNAME\u000bRes_ML_STAR\u00071.VNAME\u0007ML_STAR\u0003CNT\u00011\u000eSYSTEM,default\u0001\u0000\u0001\u0000\u0000\u0000\u0003"
+  ]
+}

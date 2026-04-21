@@ -12,6 +12,7 @@ from app.api.routes.auth import router as auth_router
 from app.api.routes.config_routes import router as config_router
 from app.api.routes.deck import router as deck_router
 from app.api.routes.labware import router as labware_router
+from app.api.routes.deck_layout import router as deck_layout_router
 from app.api.routes.rag import router as rag_router
 from app.api.routes.settings import router as settings_router
 from app.api.routes.simulation import router as simulation_router
@@ -187,6 +188,7 @@ app.include_router(agentic_router)
 app.include_router(config_router)
 app.include_router(deck_router)
 app.include_router(labware_router)
+app.include_router(deck_layout_router)
 app.include_router(rag_router)
 app.include_router(settings_router)
 app.include_router(simulation_router)

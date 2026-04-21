@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
 router = APIRouter(prefix="/api/agentic", tags=["agentic"])
-AgenticPhase = Literal["deck_layout", "procedure", "generation"]
+AgenticPhase = Literal["procedure", "generation"]
 
 
 class ClarifyMessage(BaseModel):
@@ -175,42 +175,36 @@ def _normalize_ready_response(text: str) -> AgenticChatResponse:
     return AgenticChatResponse(ready=False, question=cleaned)
 
 
-async def _get_labware_system_context(db: DbSession) -> str:
-    """Fetch active carrier and labware types from DB and format for system prompt."""
-    from sqlalchemy import select
-    from app.models.labware import LabwareType, CarrierType as CarrierTypeModel
-
-    try:
-        lw_result = await db.execute(
-            select(LabwareType).where(LabwareType.is_active == True).order_by(LabwareType.category, LabwareType.name)
-        )
-        labware_types = lw_result.scalars().all()
-
-        ct_result = await db.execute(
-            select(CarrierTypeModel).where(CarrierTypeModel.is_active == True).order_by(CarrierTypeModel.category, CarrierTypeModel.name)
-        )
-        carrier_types = ct_result.scalars().all()
-    except Exception as e:
-        logger.warning(f"Failed to fetch labware context: {e}")
+def _get_labware_system_context(deck_config: Optional[dict]) -> str:
+    """Extract carrier and labware context from the selected deck layout configuration."""
+    if not deck_config:
         return ""
 
-    if not labware_types and not carrier_types:
+    carriers = deck_config.get("carriers", [])
+    if not carriers:
         return ""
 
     lines: list[str] = []
-    if carrier_types:
-        lines.append("### Carrier Types")
-        for ct in carrier_types:
-            accepts_str = ", ".join(ct.accepts) if ct.accepts else "unknown"
-            lines.append(
-                f"- {ct.name} (code: {ct.code}): {ct.num_slots} slots, "
-                f"{ct.width_rails} rails wide, accepts: {accepts_str}"
-            )
-    if labware_types:
-        lines.append("### Labware Types")
-        for lw in labware_types:
-            desc = f" — {lw.description}" if lw.description else ""
-            lines.append(f"- {lw.name} (code: {lw.code}, category: {lw.category}){desc}")
+    seen_labware: set[str] = set()
+
+    lines.append("### Carriers on Deck")
+    for carrier in carriers:
+        carrier_type = carrier.get("carrier_type", "unknown")
+        start_rail = carrier.get("start_rail", "?")
+        lines.append(f"- {carrier_type} starting at rail {start_rail}")
+
+    lines.append("### Labware on Deck")
+    for carrier in carriers:
+        carrier_type = carrier.get("carrier_type", "unknown")
+        for i, slot in enumerate(carrier.get("slots", []), start=1):
+            if not slot:
+                continue
+            code = slot.get("subtype", "")
+            name = slot.get("name", code)
+            category = slot.get("type", "unknown")
+            if code and code not in seen_labware:
+                seen_labware.add(code)
+                lines.append(f"- {name} (code: {code}, category: {category})")
 
     return "\n".join(lines)
 
@@ -323,7 +317,7 @@ async def validate_phase(
         return ApiResponse.error(message=f"Failed to build validation prompt: {e}", status_code=500)
 
     # Build system prompt with labware context
-    labware_ctx = await _get_labware_system_context(db)
+    labware_ctx = _get_labware_system_context(req.deck_config)
     system_prompt_text = get_system_prompt("agentic", labware_context=labware_ctx)
 
     # Call LLM
@@ -397,7 +391,7 @@ async def chat(
             f"{req.goal} {last_user_msg}".strip(),
         )
 
-    labware_ctx = await _get_labware_system_context(db)
+    labware_ctx = _get_labware_system_context(req.deck_config)
     system_prompt_text = get_system_prompt("agentic", labware_context=labware_ctx)
 
     logger.info(f"📝 Sending prompt to {req.llm_config.provider} provider...")
@@ -452,7 +446,7 @@ async def generate(
         procedure_context=req.procedure_context or "",
         rag_context=combined_rag,
     )
-    labware_ctx = await _get_labware_system_context(db)
+    labware_ctx = _get_labware_system_context(req.deck_config)
     response = await provider.generate(
         prompt,
         system_prompt=get_system_prompt("agentic", labware_context=labware_ctx),
@@ -520,7 +514,7 @@ async def fix(
         verification_feedback=verification_feedback,
         knowledge_context=kb_context,
     )
-    labware_ctx = await _get_labware_system_context(db)
+    labware_ctx = _get_labware_system_context(req.deck_config)
     response = await provider.generate(
         prompt,
         system_prompt=get_system_prompt("agentic", labware_context=labware_ctx),

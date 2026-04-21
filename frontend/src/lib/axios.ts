@@ -69,21 +69,26 @@ export const axiosAuthInstance = axios.create({
 
 // ─── Request Interceptors ─────────────────────────────────────────────────────
 
+// Shared request setup: track timing + let FormData set its own Content-Type
+function setupRequest(config: InternalAxiosRequestConfig): InternalAxiosRequestConfig {
+  config.metadata = { startTime: Date.now() }
+  // When sending FormData, remove the hardcoded JSON Content-Type so axios can
+  // set the correct multipart/form-data boundary automatically.
+  if (config.data instanceof FormData) {
+    delete config.headers['Content-Type']
+  }
+  return config
+}
+
 // Base instance interceptor
 axiosInstance.interceptors.request.use(
-  (config: InternalAxiosRequestConfig) => {
-    config.metadata = { startTime: Date.now() }
-    return config
-  },
+  setupRequest,
   (error: AxiosError) => Promise.reject(error)
 )
 
 // Auth instance interceptor — cookies are sent automatically, just track timing
 axiosAuthInstance.interceptors.request.use(
-  (config: InternalAxiosRequestConfig) => {
-    config.metadata = { startTime: Date.now() }
-    return config
-  },
+  setupRequest,
   (error: AxiosError) => Promise.reject(error)
 )
 

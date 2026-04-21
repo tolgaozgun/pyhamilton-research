@@ -1,17 +1,11 @@
-import { FlaskConical, Lightbulb } from 'lucide-react'
+import { FlaskConical, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export interface ProcedureDraftInputProps {
   value: string
-  onChange: (value: string) => void
-  placeholder?: string
 }
 
-export function ProcedureDraftInput({
-  value,
-  onChange,
-  placeholder = 'Describe what the script should do, step by step...',
-}: ProcedureDraftInputProps) {
+export function ProcedureDraftInput({ value }: ProcedureDraftInputProps) {
   const hasContent = value.trim().length > 0
   const lines = value.split('\n').filter(Boolean).length
 
@@ -32,38 +26,35 @@ export function ProcedureDraftInput({
             Procedure Draft
           </label>
           <p className="text-xs text-gray-500 mt-0.5">
-            Define the step-by-step protocol for the automation
+            Generated from your conversation with the AI assistant
           </p>
         </div>
         {hasContent && (
-          <span className="text-xs text-gray-400 font-mono">{lines} steps</span>
+          <span className="text-xs text-gray-400 font-mono">{lines} step{lines !== 1 ? 's' : ''}</span>
         )}
       </div>
 
-      {/* Input area */}
+      {/* Content */}
       <div className="p-4">
-        <div className="relative group">
-          <textarea
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-            placeholder={placeholder}
-            rows={8}
-            className={cn(
-              'w-full px-4 py-3 bg-white border rounded-lg text-gray-900',
-              'placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400/50',
-              'resize-none text-sm leading-relaxed transition-all duration-200 font-mono',
-              'border-gray-300 group-hover:border-gray-400 focus:border-gray-500'
-            )}
-          />
-        </div>
-
-        {/* Helper text */}
-        <div className="flex items-center gap-2 mt-3 px-2">
-          <Lightbulb className="w-3.5 h-3.5 text-gray-400 shrink-0" />
-          <p className="text-xs text-gray-500">
-            List each step clearly: aspirate, dispense, mix, incubate, etc.
-          </p>
-        </div>
+        {hasContent ? (
+          <div className={cn(
+            'w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg',
+            'text-sm leading-relaxed text-gray-800 font-mono whitespace-pre-wrap',
+            'min-h-[120px] max-h-64 overflow-y-auto'
+          )}>
+            {value}
+          </div>
+        ) : (
+          <div className="flex flex-col items-center justify-center gap-3 py-8 text-center border border-dashed border-gray-200 rounded-lg bg-gray-50/50">
+            <MessageSquare className="w-8 h-8 text-gray-300" />
+            <div>
+              <p className="text-sm font-medium text-gray-500">No procedure defined yet</p>
+              <p className="text-xs text-gray-400 mt-1">
+                Chat with the AI above until it indicates it's ready — your procedure will appear here automatically.
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
