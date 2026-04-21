@@ -109,3 +109,178 @@ def build_fix_prompt(
         "Return the corrected code in a ```python code block."
     )
     return "\n".join(parts)
+
+
+def build_agentic_validate_prompt(
+    phase: str,
+    goal: str,
+    deck_context: str = "",
+    procedure_context: str = "",
+    knowledge_context: str = "",
+) -> str:
+    def _kb(kc: str) -> list[str]:
+        return [f"\n{kc}"] if kc else []
+
+    if phase == "deck_layout":
+        parts = [
+            "## Deck Layout Validation",
+            "Validate the following Hamilton STAR deck configuration for PyHamilton.",
+            "",
+            f"## Automation Goal\n{goal}",
+            f"## Deck Configuration\n{deck_context or '(no deck configured)'}",
+        ]
+        parts.extend(_kb(knowledge_context))
+        parts.extend([
+            "",
+            "Assess:",
+            "1. Are the carrier placements physically valid (no rail conflicts, within deck bounds)?",
+            "2. Is the labware present and appropriate for the stated goal?",
+            "3. Are tip racks present for aspirate/dispense operations?",
+            "",
+            "Respond with exactly VALID or INVALID on the first line, then a brief explanation (2-4 sentences).",
+        ])
+        return "\n".join(parts)
+    if phase == "procedure":
+        parts = [
+            "## Procedure Validation",
+            "Validate the following automation procedure description for PyHamilton script generation.",
+            "",
+            f"## Automation Goal\n{goal}",
+            f"## Deck Configuration\n{deck_context or '(none)'}",
+            f"## Procedure Description\n{procedure_context or '(none)'}",
+        ]
+        parts.extend(_kb(knowledge_context))
+        parts.extend([
+            "",
+            "Assess whether the procedure is complete and specific enough to generate a correct PyHamilton script.",
+            "Check that each of the following is clear or reasonably inferable:",
+            "1. Source and destination labware positions",
+            "2. Volumes to transfer",
+            "3. Tip strategy (replace per sample, reuse, etc.)",
+            "4. Number of samples, wells, or cycles",
+            "",
+            "Respond with exactly VALID or INVALID on the first line, then a brief explanation (2-4 sentences).",
+        ])
+        return "\n".join(parts)
+    parts = [
+        f"## Validation — phase: {phase}",
+        f"Goal: {goal}",
+    ]
+    parts.extend(_kb(knowledge_context))
+    parts.append("Is this step complete and ready to proceed? Respond with VALID or INVALID on the first line, then a brief explanation.")
+    return "\n".join(parts)
+
+
+def build_agentic_chat_prompt(
+    phase: str,
+    goal: str,
+    conversation: str,
+    deck_context: str = "",
+    procedure_context: str = "",
+    generation_context: str = "",
+) -> str:
+    phase_instructions = {
+        "deck_layout": (
+            "You are validating a Hamilton deck layout for PyHamilton. Ask exactly one targeted question "
+            "if anything is missing or ambiguous. If the deck layout is valid and ready for use, respond with "
+            "exactly READY on the first line and a brief summary on the next line."
+        ),
+        "procedure": (
+            "You are helping define the procedure that will run on the validated deck. Ask exactly one targeted "
+            "question per turn. If the procedure is complete, respond with exactly READY on the first line and "
+            "a concise summary on the next line."
+        ),
+        "generation": (
+            "You are helping with final generation constraints before code creation. Ask exactly one targeted "
+            "question if needed. If enough detail is present, respond with exactly READY on the first line and "
+            "a concise summary on the next line."
+        ),
+    }
+    instructions = phase_instructions.get(phase, phase_instructions["procedure"])
+    parts = [
+        "## Agentic Conversation",
+        instructions,
+        "",
+        f"## Phase\n{phase}",
+        f"## Goal\n{goal}",
+    ]
+    if deck_context:
+        parts.append(f"## Deck Context\n{deck_context}")
+    if procedure_context:
+        parts.append(f"## Procedure Context\n{procedure_context}")
+    if generation_context:
+        parts.append(f"## Generation Context\n{generation_context}")
+    parts.extend([
+        "## Conversation So Far",
+        conversation or "(none)",
+        "",
+        "Return either one question or READY. Do not ask multiple questions.",
+    ])
+    return "\n".join(parts)
+
+
+def build_agentic_generation_prompt(
+    goal: str,
+    deck_context: str,
+    procedure_context: str,
+    rag_context: str = "",
+) -> str:
+    parts = [
+        "## Final Generation",
+        "Generate both a production-ready PyHamilton script and a pytest file that validates the script at a useful level.",
+        "",
+        f"## Goal\n{goal}",
+    ]
+    if deck_context:
+        parts.append(f"## Deck Context\n{deck_context}")
+    if procedure_context:
+        parts.append(f"## Procedure Summary\n{procedure_context}")
+    if rag_context:
+        parts.append(f"## Reference Context\n{rag_context}")
+    parts.append(
+        "## Output Requirements\n"
+        "- Return exactly two Python code blocks: first the script, second the tests\n"
+        "- The script must be import-safe and keep execution behind `if __name__ == '__main__'`\n"
+        "- The tests should mock or stub hardware-facing pieces and focus on behavior, structure, and safety\n"
+        "- Avoid inventing PyHamilton APIs that are not necessary\n"
+        "- Include brief comments only where they help the reader understand the workflow"
+    )
+    return "\n".join(parts)
+
+
+def build_agentic_fix_prompt(
+    goal: str,
+    deck_context: str,
+    procedure_context: str,
+    script: str,
+    tests: str,
+    verification_feedback: str,
+    knowledge_context: str = "",
+) -> str:
+    parts = [
+        "## Fix Agentic Output",
+        "The generated script or tests failed verification. Make targeted fixes only.",
+        "",
+        f"## Goal\n{goal}",
+    ]
+    if deck_context:
+        parts.append(f"## Deck Context\n{deck_context}")
+    if procedure_context:
+        parts.append(f"## Procedure Summary\n{procedure_context}")
+    if knowledge_context:
+        parts.append(knowledge_context)
+    parts.extend(
+        [
+            "## Current Script",
+            f"```python\n{script}\n```",
+            "",
+            "## Current Tests",
+            f"```python\n{tests}\n```",
+            "",
+            "## Verification Feedback",
+            verification_feedback,
+            "",
+            "Return exactly two Python code blocks again: first the corrected script, then the corrected tests.",
+        ]
+    )
+    return "\n".join(parts)

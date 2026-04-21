@@ -16,5 +16,8 @@ release/
 *.dmg
 *.exe
 *.AppImage
+*.pdf
+.idea/
+docs/
 
 *.md

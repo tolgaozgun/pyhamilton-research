@@ -126,7 +126,6 @@ RAG_DIR.mkdir(parents=True, exist_ok=True)
 class LLMConfig(BaseModel):
     provider: Provider = Provider.GOOGLE
     model_name: str = "gemini-2.0-flash"
-    api_key: Optional[str] = None
     temperature: float = Field(default=0.3, ge=0.0, le=2.0)
     max_tokens: int = Field(default=4096, ge=1)
 

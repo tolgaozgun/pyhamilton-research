@@ -1,14 +1,18 @@
 from __future__ import annotations
 
-import json
-
-from fastapi import APIRouter, HTTPException
-from fastapi.responses import StreamingResponse
+from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
+from sqlalchemy.ext.asyncio import AsyncSession
+
+DbSession = AsyncSession
 
 from app.config import LLMConfig, UserInput, PipelineState
 from app.api.deps import get_provider
+from app.api.deps_auth import get_current_active_user
 from app.core.pipeline import run_developer_pipeline
+from app.models.user import User
+from app.database import get_db
+from app.core.responses import ApiResponse
 
 router = APIRouter(prefix="/api/developer", tags=["developer"])
 
@@ -19,42 +23,17 @@ class DeveloperRequest(BaseModel):
 
 
 @router.post("/run")
-async def run_pipeline(req: DeveloperRequest):
-    provider = get_provider(req.llm_config)
+async def run_pipeline(
+    req: DeveloperRequest,
+    db: DbSession = Depends(get_db),
+    current_user: User = Depends(get_current_active_user),
+):
+    provider = await get_provider(req.llm_config, db, user_id=current_user.id)
     state = PipelineState(user_input=req.user_input, llm_config=req.llm_config)
     try:
         final_state = state
         async for step_state in run_developer_pipeline(provider, state):
             final_state = step_state
-        return final_state.model_dump()
+        return ApiResponse.success(data=final_state.model_dump(), message="Pipeline completed successfully")
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=str(exc))
-
-
-@router.get("/stream")
-async def stream_pipeline(
-    goal: str,
-    provider_name: str = "google",
-    model_name: str = "gemini-2.0-flash",
-    api_key: str = "",
-    context: str = "",
-):
-    from app.config import Provider, Mode
-    llm_config = LLMConfig(
-        provider=Provider(provider_name),
-        model_name=model_name,
-        api_key=api_key or None,
-    )
-    user_input = UserInput(goal=goal, mode=Mode.DEVELOPER, context=context or None)
-    prov = get_provider(llm_config)
-    state = PipelineState(user_input=user_input, llm_config=llm_config)
-
-    async def event_stream():
-        try:
-            async for step_state in run_developer_pipeline(prov, state):
-                yield f"data: {json.dumps({'step': step_state.step.value, 'state': step_state.model_dump()})}\n\n"
-            yield f"data: {json.dumps({'done': True})}\n\n"
-        except Exception as exc:
-            yield f"data: {json.dumps({'error': str(exc)})}\n\n"
-
-    return StreamingResponse(event_stream(), media_type="text/event-stream")
+        return ApiResponse.error(message=str(exc), status_code=500)

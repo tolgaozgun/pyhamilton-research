@@ -138,6 +138,7 @@ async def run_agentic_pipeline(
 
         # Feasibility
         state.step = PipelineStep.FEASIBILITY
+        yield {"event": "step_start", "step": "feasibility"}
         prompt = build_feasibility_prompt(state.user_input.goal, state.user_input.context)
         response = await provider.generate(prompt, system_prompt=system_prompt)
         state.feasibility = response.text

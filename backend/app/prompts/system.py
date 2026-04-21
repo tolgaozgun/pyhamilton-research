@@ -28,6 +28,9 @@ MODE_ADDENDA = {
 }
 
 
-def get_system_prompt(mode: str) -> str:
+def get_system_prompt(mode: str, labware_context: str = "") -> str:
     addendum = MODE_ADDENDA.get(mode, MODE_ADDENDA["simple"])
-    return f"{BASE_PERSONA}\n\n{addendum}"
+    base = f"{BASE_PERSONA}\n\n{addendum}"
+    if labware_context:
+        return f"{base}\n\n## Available Labware in System\n{labware_context}"
+    return base

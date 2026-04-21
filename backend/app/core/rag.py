@@ -209,3 +209,69 @@ def format_rag_context(query: str, top_k: int = 5) -> str:
     for entry in entries:
         parts.append(f"### {entry['topic']}\n{entry['content']}\n")
     return "\n".join(parts)
+
+
+async def search_vector_store_context(
+    db,
+    user,
+    vector_store_id: str,
+    query: str,
+    max_results: int = 5,
+) -> str:
+    """
+    Search a user's OpenAI vector store and return results formatted as a
+    prompt context block.  Returns an empty string on any failure so callers
+    can treat it as a soft dependency.
+    """
+    import os
+    try:
+        import openai
+    except ImportError:
+        logger.warning("openai package not installed; skipping vector store search")
+        return ""
+
+    from sqlalchemy import select
+    from app.models import UserSettings
+
+    # Resolve API key: DB first, then env
+    api_key: str | None = None
+    try:
+        result = await db.execute(
+            select(UserSettings).where(
+                UserSettings.user_id == user.id,
+                UserSettings.provider == "openai",
+            )
+        )
+        settings = result.scalar_one_or_none()
+        if settings and settings.api_key:
+            api_key = settings.api_key
+    except Exception as e:
+        logger.warning(f"DB lookup for OpenAI key failed: {e}")
+
+    if not api_key:
+        api_key = os.getenv("OPENAI_API_KEY")
+
+    if not api_key:
+        logger.warning("No OpenAI API key available; skipping vector store search")
+        return ""
+
+    try:
+        client = openai.AsyncOpenAI(api_key=api_key)
+        results = await client.vector_stores.search(
+            vector_store_id=vector_store_id,
+            query=query,
+            max_num_results=max_results,
+        )
+        if not results.data:
+            return ""
+
+        parts = ["## Knowledge Base Context\n"]
+        for item in results.data:
+            for chunk in item.content:
+                if hasattr(chunk, "text") and chunk.text:
+                    text_value = chunk.text.value if hasattr(chunk.text, "value") else str(chunk.text)
+                    parts.append(f"{text_value.strip()}\n")
+        return "\n".join(parts)
+    except Exception as e:
+        logger.warning(f"Vector store search failed (id={vector_store_id}): {e}")
+        return ""

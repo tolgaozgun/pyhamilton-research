@@ -1,4 +1,5 @@
 export type Mode = 'simple' | 'developer' | 'agentic'
+export type AgenticPhase = 'deck_layout' | 'procedure' | 'generation'
 
 export type Provider = 'google' | 'openai' | 'anthropic' | 'openrouter'
 
@@ -14,7 +15,6 @@ export type PipelineStep =
 export interface LLMConfig {
   provider: Provider
   model_name: string
-  api_key: string
   temperature: number
   max_tokens: number
 }
@@ -25,6 +25,7 @@ export interface UserInput {
   context?: string
   image_b64?: string
   max_retries?: number
+  deck_config?: Record<string, unknown>
 }
 
 export interface LabwareMap {
@@ -68,6 +69,44 @@ export interface PipelineState {
   max_retries: number
   events: Array<Record<string, unknown>>
   error?: string
+}
+
+export interface AgenticChatMessage {
+  role: 'user' | 'assistant'
+  content: string
+}
+
+export interface AgenticValidateResponse {
+  valid: boolean
+  feedback: string
+}
+
+export interface AgenticChatResponse {
+  ready: boolean
+  question?: string | null
+  summary?: string | null
+}
+
+export interface AgenticGenerationResponse {
+  script: string
+  tests: string
+  notes?: string | null
+}
+
+export interface AgenticVerificationArtifact {
+  passed: boolean
+  exit_code: number
+  stdout: string
+  stderr: string
+  command: string
+}
+
+export interface AgenticVerificationResponse {
+  syntax: AgenticVerificationArtifact
+  interpreter: AgenticVerificationArtifact
+  pytest: AgenticVerificationArtifact
+  passed: boolean
+  feedback: string
 }
 
 export interface ProviderInfo {
@@ -227,6 +266,60 @@ export const PLATE_CATALOG: Record<string, string> = {
 
 export const RESERVOIR_CATALOG: Record<string, string> = {
   trough_300ml: '300mL Trough',
+}
+
+// ─── RAG / Knowledge Base types ──────────────────────────────────────────────
+
+export interface RAGFile {
+  id: string
+  object: string
+  bytes: number
+  created_at: number
+  filename: string
+  purpose: string
+  status?: string | null
+}
+
+export interface VectorStoreFileCounts {
+  in_progress: number
+  completed: number
+  failed: number
+  cancelled: number
+  total: number
+}
+
+export interface VectorStore {
+  id: string
+  object: string
+  name: string
+  status: string
+  created_at: number
+  file_counts: VectorStoreFileCounts
+  usage_bytes: number
+  expires_after?: { anchor: string; days: number } | null
+  expires_at?: number | null
+  last_active_at?: number | null
+}
+
+export interface VectorStoreFile {
+  id: string
+  object: string
+  created_at: number
+  vector_store_id: string
+  status: string
+  last_error?: string | null
+}
+
+export interface RAGSearchResultContent {
+  type: string
+  text: { value: string }
+}
+
+export interface RAGSearchResult {
+  file_id: string
+  filename: string
+  score: number
+  content: RAGSearchResultContent[]
 }
 
 export const DEFAULT_ASPIRATION: AspirationSettingsData = {
