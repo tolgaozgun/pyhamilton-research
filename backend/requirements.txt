@@ -1,0 +1,30 @@
+fastapi
+uvicorn[standard]
+pydantic>=2.0
+python-dotenv
+google-genai
+openai
+anthropic
+Pillow
+pyyaml
+sqlalchemy>=2.0
+asyncpg
+psycopg[binary]
+alembic
+
+# Authentication & Security
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+python-jose[cryptography]
+pyotp
+email-validator
+python-multipart
+
+# Rate limiting & Security
+slowapi
+itsdangerous
+
+# CORS
+fastapi-cors
+
+# # chromadb  # optional: install for vector-based RAG retrieval
