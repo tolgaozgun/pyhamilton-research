@@ -1,4 +1,4 @@
-import { BaseRepository, AuthenticatedRepository } from '../repository'
+import { BaseRepository } from '../repository'
 import type {
   LLMConfig,
   UserInput,

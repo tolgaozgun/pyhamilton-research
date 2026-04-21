@@ -76,7 +76,7 @@ function VectorStoreCard({
   const [addingFile, setAddingFile] = useState(false)
   const [selectedFileId, setSelectedFileId] = useState('')
   const [searchQuery, setSearchQuery] = useState('')
-  const [isSearching, setIsSearching] = useState(false)
+  const [, setIsSearching] = useState(false)
 
   const handleExpand = () => {
     if (!expanded) onFetchFiles(store.id)

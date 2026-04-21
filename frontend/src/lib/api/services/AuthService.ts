@@ -4,7 +4,7 @@
  * Note: Auth endpoints use BaseRepository for login/register, but AuthenticatedRepository for others
  */
 
-import { BaseRepository, AuthenticatedRepository } from '../repository'
+import { BaseRepository } from '../repository'
 import type {
   LoginRequest,
   RegisterRequest,

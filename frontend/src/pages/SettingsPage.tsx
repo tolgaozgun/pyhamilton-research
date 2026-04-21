@@ -18,7 +18,7 @@ import { toast } from 'sonner'
 import { cn } from '@/lib/utils'
 import { axiosInstance } from '@/lib/axios'
 import { aiService, type AIProvider, type AIModel, ANTHROPIC_MODELS, OPENAI_MODELS, GOOGLE_MODELS } from '@/lib/ai/service'
-import { useSettingsManager, type AllSettings, type ProviderSettings } from '@/lib/hooks/useSettingsManager'
+import { useSettingsManager, type ProviderSettings } from '@/lib/hooks/useSettingsManager'
 
 const PROVIDER_INFO: Record<
   AIProvider,
@@ -55,29 +55,6 @@ const MODEL_LIMITS: Record<string, { maxTokens: number; context: number }> = {
   'gemini-1.5-pro': { maxTokens: 8192, context: 2000000 },
 }
 
-const DEFAULT_SETTINGS: AllSettings = {
-  anthropic: {
-    api_key: null,
-    selected_model: null,
-    models_list: null,
-    models_fetched_at: null,
-    preferences: { temperature: 0.7, max_tokens: 4096 },
-  },
-  openai: {
-    api_key: null,
-    selected_model: null,
-    models_list: null,
-    models_fetched_at: null,
-    preferences: { temperature: 0.7, max_tokens: 4096 },
-  },
-  google: {
-    api_key: null,
-    selected_model: null,
-    models_list: null,
-    models_fetched_at: null,
-    preferences: { temperature: 0.7, max_tokens: 4096 },
-  },
-}
 
 function ProviderCard({ provider, settings, onUpdate, isRefreshing, onRefresh }: {
   provider: AIProvider
@@ -363,7 +340,7 @@ function ProviderCard({ provider, settings, onUpdate, isRefreshing, onRefresh }:
 }
 
 export default function SettingsPage() {
-  const { settings, isLoading, fetchSettings, updateProviderSettings, saveProviderModels } = useSettingsManager()
+  const { settings, isLoading, updateProviderSettings, saveProviderModels } = useSettingsManager()
   const [refreshingProvider, setRefreshingProvider] = useState<AIProvider | null>(null)
   const [connectionStatus, setConnectionStatus] = useState<'idle' | 'ok' | 'error'>('idle')
   const [statusMessage, setStatusMessage] = useState('')
