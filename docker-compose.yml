@@ -1,0 +1,50 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DATABASE_URL=postgresql+asyncpg://hamilton:hamilton_pass@db:5432/hamilton_db
+    volumes:
+      - backend-logs:/app/logs
+      - backend-rag:/app/rag_data
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+      target: development
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:16-alpine
+    container_name: hamilton_db
+    environment:
+      - POSTGRES_USER=hamilton
+      - POSTGRES_PASSWORD=hamilton_pass
+      - POSTGRES_DB=hamilton_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hamilton -d hamilton_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  backend-logs:
+  backend-rag:
+  postgres_data:
