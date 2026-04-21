@@ -30,7 +30,7 @@ jobs:
           host: ${{ secrets.VPS_TAILSCALE_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          key_passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
+          passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
           envs: PROD_ENV_FILE
           script: |
             cd /opt/hamilton-script-gen
