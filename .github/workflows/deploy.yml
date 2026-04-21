@@ -33,8 +33,13 @@ jobs:
           passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
           envs: PROD_ENV_FILE
           script: |
+            set -e
+            mkdir -p /opt/hamilton-script-gen
+            if [ ! -d /opt/hamilton-script-gen/.git ]; then
+              git clone https://github.com/tolgaozgun/pyhamilton-research.git /opt/hamilton-script-gen
+            fi
             cd /opt/hamilton-script-gen
-            printf '%s' "$PROD_ENV_FILE" > .env
             git pull origin main
+            printf '%s' "$PROD_ENV_FILE" > .env
             docker compose -f docker-compose.prod.yml --env-file .env up -d --build
             docker system prune -f
